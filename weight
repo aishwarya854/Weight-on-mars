@@ -1,0 +1,29 @@
+# Weight-on-mars:To calculate weight on mars ,C++
+
+#include <iostream> // Required for input/output operations
+
+int main() {
+    double weightEarth;
+    double weightMars;
+    
+    // Define gravitational acceleration constants
+    // Earth's gravitational acceleration (approximate) in m/s^2
+    const double G_EARTH = 9.807; 
+    // Mars's gravitational acceleration (approximate) in m/s^2
+    const double G_MARS = 3.71;   
+
+    // Prompt the user to enter the item's weight on Earth
+    std::cout << "Enter the weight of the item on Earth (in Newtons or pounds): ";
+    // Read the user's input
+    std::cin >> weightEarth;
+
+    // Calculate the weight on Mars
+    // Weight on Mars = (Weight on Earth / G_EARTH) * G_MARS
+    // This effectively calculates the mass first (Weight/G_EARTH), then multiplies by Mars's gravity
+    weightMars = (weightEarth / G_EARTH) * G_MARS;
+
+    // Display the calculated weight on Mars
+    std::cout << "The item would weigh approximately " << weightMars << " on Mars." << std::endl;
+
+    return 0; // Indicate successful program execution
+}
