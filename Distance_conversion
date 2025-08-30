@@ -1,0 +1,15 @@
+#include <iostream> // Required for input/output operations
+
+int main() 
+{
+    double Miles;
+   
+    std::cout << " Enter Miles: ";
+
+    // Read the user's input
+    std::cin >> Miles;
+
+   
+    double kilometer = Miles * 1.60934;
+    std::cout << " Miles is equal to " << kilometer << " Kilometers.\n";
+}
